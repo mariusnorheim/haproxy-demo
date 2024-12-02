@@ -1,0 +1,10 @@
+# HA proxy demo
+Quick local HA proxy demo using docker-compose
+
+# Usage
+docker-compose up --build -d
+Open a browser and visit http://127.0.0.1 - Requests should be routed to the backend servers!
+
+# Load test script
+Sends X amount of requests over Y amount of threads and calculates statistics and plots a visualization chart
+python3 loadtest.py
