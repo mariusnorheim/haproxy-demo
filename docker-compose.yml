@@ -1,6 +1,7 @@
 services:
     haproxy:
-        image: haproxy:latest
+        build:
+            context: ./haproxy
         container_name: haproxy
         ports:
             - '80:80'
@@ -14,7 +15,8 @@ services:
             driver: none
 
     syslog:
-        image: balabit/syslog-ng:latest
+        build:
+            context: ./syslog
         container_name: syslog
         volumes:
             - ./logs:/var/log
